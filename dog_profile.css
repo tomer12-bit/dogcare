@@ -1,0 +1,82 @@
+/* dog_profile.css */
+/* התאמה למחלקות שקיימות בפועל ב-HTML שלך */
+
+* { box-sizing: border-box; }
+
+body{
+  font-family: Arial, "Heebo", sans-serif;
+  margin: 0;
+}
+
+/* רקע כללי (יש לך body class="app-bg") */
+.app-bg{
+  background-color: #dff3ff;
+}
+
+/* Header (יש לך class="site-header") */
+.site-header{
+  background-color: #ffffff;
+  border-bottom: 1px solid #e3e6ea;
+}
+
+/* אזור כותרת עליון (יש לך class="hero-section") */
+.hero-section{
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+/* כרטיסים (יש לך class="status-card") */
+.status-card{
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #e6e9ef;
+  height: 100%;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.status-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+/* Footer (יש לך class="site-footer") */
+.site-footer{
+  background-color: #ffffff;
+  border-top: 1px solid #e3e6ea;
+  color: #6c757d;
+}
+
+/* ריווח נעים לרשימות בתוך הכרטיסים */
+.status-card ul li{
+  margin-bottom: 6px;
+}
+
+/* אם תרצה מראה "סטטיסטיקות" יותר מסודר: 
+   פשוט הוסף ל-UL של הסטטיסטיקות ב-HTML: class="stats-list" */
+.stats-list li{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #e0e4ea;
+  padding: 4px 0;
+}
+
+@media (max-width: 576px){
+  main.container{
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+  }
+  .hero-section{ padding: 18px; }
+  header .container{ gap: 10px !important; }
+}
+/* כרטיס תמונה – גובה קבוע */
+.image-card{
+  padding: 0;
+  overflow: hidden;
+  height: 240px;   /* ⬅️ זה הפתרון */
+}
+
+
+

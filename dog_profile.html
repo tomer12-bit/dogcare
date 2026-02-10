@@ -1,0 +1,93 @@
+<!-- dog_profile.html -->
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <!-- הגדרות בסיסיות: קידוד + רספונסיביות -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- כותרת הדף -->
+  <title>DogCare | פרופיל הכלב</title>
+
+  <!-- Bootstrap: גריד, כפתורים וריווחים -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS ייעודי למסך פרופיל הכלב -->
+  <link rel="stylesheet" href="dog_profile.css">
+</head>
+
+<body class="app-bg">
+<!-- class="app-bg" קובע רקע כללי למסך -->
+
+<!-- Header עליון -->
+<header class="site-header">
+  <div class="container py-3 d-flex justify-content-between align-items-center">
+    
+    <!-- שם המערכת -->
+    <h1 class="h4 m-0">🐶 DogCare</h1>
+
+    <!-- תפריט ניווט: רק דף הבית -->
+    <nav>
+      <a href="../index.html" class="btn btn-outline-secondary btn-sm">דף הבית</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- תוכן מרכזי -->
+<main class="container my-4">
+
+  <!-- כותרת המסך -->
+  <section class="hero-section mb-4">
+    <h2 class="h3">פרופיל הכלב</h2>
+    <p class="text-muted mb-0">
+      מידע כללי על הכלב במערכת
+    </p>
+  </section>
+
+  <!-- אזור כרטיסים -->
+  <section class="row g-3">
+
+    <!-- כרטיס: פרטים כלליים -->
+    <article class="col-12">
+      <div class="status-card">
+        <h3 class="h6">פרטים כלליים</h3>
+        <ul class="list-unstyled small mb-0">
+          <li><strong>שם:</strong> לולה</li>
+          <li><strong>גזע:</strong> מעורב</li>
+          <li><strong>גיל:</strong> 4 שנים</li>
+          <li><strong>מין:</strong> נקבה</li>
+          <li><strong>משקל:</strong> 18 ק״ג</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- כרטיס: הרגלים והעדפות -->
+    <article class="col-12">
+      <div class="status-card">
+        <h3 class="h6">הרגלים והעדפות</h3>
+        <p class="small text-muted mb-1">
+          מידע כללי שנשמר לצורך מעקב עתידי
+        </p>
+        <ul class="small mb-0">
+          <li>טיול מועדף: ערב</li>
+          <li>רגישות למזון: אין</li>
+          <li>אוהבת צעצועים: כן</li>
+        </ul>
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<!-- Footer תחתון -->
+<footer class="site-footer mt-4">
+  <div class="container py-3 text-center small">
+    © 2025 DogCare
+  </div>
+</footer>
+
+
+</body>
+</html>

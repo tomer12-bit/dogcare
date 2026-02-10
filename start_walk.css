@@ -1,0 +1,124 @@
+/* הקובץ אחראי על עיצוב דף "התחלת טיול" */
+
+/* הגדרת box-sizing אחיד לכל האלמנטים */
+* {
+  box-sizing: border-box;
+}
+
+/* עיצוב בסיסי של גוף הדף */
+body {
+  font-family: Arial, "Heebo", sans-serif; /* גופן ברירת מחדל */
+  margin: 0; /* ביטול רווחים חיצוניים */
+}
+
+/* רקע כללי של האפליקציה */
+.app-bg {
+  background-color: #dff3ff;
+}
+
+/* עיצוב אזור הכותרת העליונה */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e3e6ea;
+}
+
+/* עיצוב אזור מרכזי (hero) */
+.hero-section {
+  background-color: #ffffff;
+  padding: 24px; /* רווח פנימי */
+  border-radius: 18px; /* פינות מעוגלות */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05); /* צל עדין */
+}
+
+/* כרטיסי סטטוס */
+.status-card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #e6e9ef;
+  height: 100%;
+  transition: transform 150ms ease, box-shadow 150ms ease; /* אנימציית hover */
+}
+
+/* אפקט ריחוף על כרטיס */
+.status-card:hover {
+  transform: translateY(-2px); /* הרמה קלה */
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+/* התאמה לטקסט קטן בתוך כרטיס */
+.status-card .small {
+  margin-bottom: 0;
+}
+
+/* עיגול פינות לכפתורים */
+section .btn {
+  border-radius: 14px;
+}
+
+/* עיצוב אזור הפוטר */
+.site-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e3e6ea;
+  color: #6c757d;
+}
+
+/* עיצוב שמתווסף לכרטיס בזמן שטיול פעיל */
+.walk-active {
+  border-color: #b9d7ff; /* שינוי צבע מסגרת */
+  box-shadow: 0 10px 26px rgba(0,0,0,0.07);
+}
+
+/* קונטיינר של אינדיקציה לפעילות */
+.walk-indicator {
+  display: flex;
+  align-items: center;     /* יישור אנכי */
+  justify-content: center; /* יישור אופקי */
+  gap: 8px;                /* רווח בין אלמנטים */
+  margin-bottom: 8px;
+}
+
+/* נקודה פועמת */
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;       /* עיגול */
+  background: #0d6efd;      /* צבע כחול */
+  animation: pulse 1s infinite; /* הפעלת אנימציה */
+}
+
+/* הגדרת שלבי האנימציה של הפעימה */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* התאמות למסכים קטנים (מובייל) */
+@media (max-width: 576px) {
+
+  /* הקטנת רווחים כלליים */
+  main.container {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* הקטנת padding ב-hero */
+  .hero-section {
+    padding: 18px;
+  }
+
+  /* ריווח בכותרת במובייל */
+  header .container {
+    gap: 10px !important;
+  }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DogCare - הוספת פעולה</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/form.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- JS validation -->
+  <script src="../JS/formValidation.js" defer></script>
+</head>
+
+<body class="app-bg">
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">🐶 DogCare</h1>
+
+    <nav class="top-nav">
+      <a href="../index.html">דף הבית</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+
+    <h2>הוספת פעולה</h2>
+
+    <!-- חשוב: נתיב נכון ל-PHP -->
+    <form method="post" action="add_action.php" id="actionForm" novalidate>
+      <label for="action_type">סוג פעולה</label>
+      <select name="action_type" id="action_type" required>
+        <option value="">בחר</option>
+        <option value="walk">טיול</option>
+        <option value="feeding">האכלה</option>
+        <option value="treatment">טיפול</option>
+      </select>
+
+      <label for="action_datetime">תאריך ושעה</label>
+      <input type="datetime-local" name="action_datetime" id="action_datetime" required>
+
+      <label for="food_grams">כמות מזון</label>
+      <input type="number" name="food_grams" id="food_grams" min="0" step="1">
+
+      <label for="performed_by">מי ביצע</label>
+      <input type="text" name="performed_by" id="performed_by" maxlength="60" required>
+
+      <label for="duration_minutes">משך בדקות</label>
+      <input type="number" name="duration_minutes" id="duration_minutes" min="0" step="1" value="0">
+
+      <label for="notes">הערות</label>
+      <textarea name="notes" id="notes" rows="4" maxlength="500"></textarea>
+
+      <button type="submit">שמור</button>
+    </form>
+
+  </section>
+</main>
+
+</body>
+</html>

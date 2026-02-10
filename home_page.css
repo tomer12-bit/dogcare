@@ -1,0 +1,143 @@
+/* =========================
+   Global Reset
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, "Heebo", sans-serif;
+  margin: 0;
+}
+
+/* =========================
+   App Background
+   ========================= */
+.app-bg {
+  background-color: #dff3ff;
+}
+
+/* =========================
+   Header
+   ========================= */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e3e6ea;
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+.hero-section {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   Dog Profile / Image  (FIX!)
+   ========================= */
+.dog-profile {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ⬅️ פה התיקון האמיתי */
+.dog-wrapper {
+  width: 120px;        /* גודל קבוע קטן */
+  max-width: 120px;
+}
+
+.dog-profile a {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;  /* עיגול */
+  overflow: hidden;
+}
+
+.dog-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #e0e4ea;
+  background-color: #f0f2f6;
+}
+
+/* =========================
+   Status Cards
+   ========================= */
+.status-card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #e6e9ef;
+  height: 100%;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.status-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+.status-card .small {
+  margin-bottom: 0;
+}
+
+/* =========================
+   Action & Share Sections
+   ========================= */
+.action-section,
+.share-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   Buttons
+   ========================= */
+section .btn {
+  border-radius: 14px;
+}
+
+/* =========================
+   Footer
+   ========================= */
+.site-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e3e6ea;
+  color: #6c757d;
+}
+
+/* =========================
+   Responsive (Mobile)
+   ========================= */
+@media (max-width: 576px) {
+  main.container {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .hero-section {
+    padding: 18px;
+  }
+
+  /* עוד יותר קטן במובייל */
+  .dog-wrapper,
+  .dog-profile a,
+  .dog-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  header .container {
+    gap: 10px !important;
+  }
+}
